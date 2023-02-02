@@ -5,14 +5,14 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <img alt="Vue logo" class="logo" src="@/assets/clima.png" width="180" height="180" />
 
-    <div class="wrapper">
-      <HelloWorld msg="My App in Vue!" />
+    <div class="container">
+      <HelloWorld msg="App de clima!" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/">HOME</RouterLink>
+        <RouterLink to="/about">WEATHER</RouterLink>
       </nav>
     </div>
   </header>
@@ -21,6 +21,10 @@ import HelloWorld from './components/HelloWorld.vue'
 </template>
 
 <style scoped>
+body{
+  background: aquamarine;
+}
+
 header {
   line-height: 1.5;
   max-height: 100vh;
