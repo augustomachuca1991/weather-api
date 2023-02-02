@@ -22,8 +22,8 @@
         </svg>
         <span class="sr-only">Loading...</span>
     </div>
-    <div v-if="data" class="min-h-screen flex items-center justify-center">
-      <div class="flex flex-col bg-gradient-to-t from-gray-400 rounded-xl p-4 w-full max-w-xs mx-2">
+    <div v-if="data" class="flex justify-center mt-8 space-x-2">
+      <div class="flex flex-col bg-gradient-to-t from-gray-400 rounded-xl p-4 w-full sm:max-w-sm lg:max-w-xs mx-2">
         <div class="font-bold text-xl">{{ data.name }}, {{ data.sys.country }}</div>
         <div class="text-sm text-gray-500">{{ $filters.timeAgo(Date.now()) }}</div>
         <div
@@ -47,15 +47,15 @@
         </div>
         <div class="flex flex-row justify-between mt-6">
           <div class="flex flex-col items-center">
-            <div class="font-medium text-sm">Wind</div>
+            <div class="font-medium text-sm">Viento</div>
             <div class="text-sm text-gray-500">{{ Math.trunc(data.wind.speed * 3.6) }}k/h</div>
           </div>
           <div class="flex flex-col items-center">
-            <div class="font-medium text-sm">Humidity</div>
+            <div class="font-medium text-sm">Humedad</div>
             <div class="text-sm text-gray-500">{{ data.main.humidity }}%</div>
           </div>
           <div class="flex flex-col items-center">
-            <div class="font-medium text-sm">Visibility</div>
+            <div class="font-medium text-sm">Visibilidad</div>
             <div class="text-sm text-gray-500">{{ data.visibility / 1000 }}km</div>
           </div>
         </div>
@@ -63,7 +63,7 @@
           <div v-for="day in days" :key="day.id" class="flex flex-col items-center space-y-1">
             <span class="uppercase">{{ $filters.nameDay(day.dt)}}</span>
             <img :src="'http://openweathermap.org/img/wn/' + day.weather[0].icon + '@2x.png'" alt="icon-weather" />
-            <span class="text-xs">{{Math.trunc(day.temp.min)}}°/{{Math.trunc(day.temp.max)}}°</span>
+            <span class="text-xs">{{Math.trunc(day.temp.max)}}°/{{Math.trunc(day.temp.min)}}°</span>
           </div>
         </div>
       </div>
