@@ -1,11 +1,15 @@
 ## Project Setup
 
 ```sh
-copy & paste APYKEY generate https://api.openweathermap.org file .env VITE_APIKEY=""
+1) cp .env.example .env
 ```
 
 ```sh
-npm install
+2) copy & paste APYKEY generate https://api.openweathermap.org file .env VITE_APIKEY=""
+```
+
+```sh
+3) npm install
 ```
 
 ### Compile and Hot-Reload for Development
